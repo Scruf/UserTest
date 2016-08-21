@@ -9,7 +9,12 @@ def index(request):
 
 def validate(request):
 	if request.method == 'POST':
-		return HttpResponse("You Poster AssWipe")
+		try:
+			user = User.objects.get(email=request.POST.get('email'))
+			return HttpResponse("Success")
+		except User.DoesNotExists:
+			return HttpResponse("Failure")
+	
 
 def register(request):
 	if request.method == 'POST':
