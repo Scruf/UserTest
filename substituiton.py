@@ -6,7 +6,7 @@ str_s = "UFSUFBMCWFQKSWRSWFSYSQXJSYJFSYSIBMCWFQKSASSGQJRTSXBYUMZFQIBYWJBTBYYBIQG
 key = "abcdefghijklmnopqrstuvwxyz".upper()
 import itertools 
 for word in itertools.permutations( list(key) ):
-    if ''.join(word)=='qazwsxvfrpdctgbnoyujmkielh':
+    if ''.join(word)=='qazwsxvfrpdctgbnoyujmkielh'.upper():
     	print "eureka"
     	print ''.join(word)
    
